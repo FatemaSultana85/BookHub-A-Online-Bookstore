@@ -1,0 +1,147 @@
+﻿@model BookHub.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registration</title>
+    @*meta name="viewport" content="width=device-width, initial-scale=1">*@
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Flat Sign Up Form Responsive Widget Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Meta tag Keywords -->
+    <!-- css files -->
+    <link href="~/Content/RT/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="~/Content/RT/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+    <!-- //css files -->
+    <!-- online-fonts -->
+    <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Raleway+Dots' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <!--header-->
+    <div class="header-w3l">
+        <h1>User Sign Up Form</h1>
+        @ViewBag.Name
+    </div>
+    <!--//header-->
+    <!--main-->
+    <div class="main-agileits">
+        <h2 class="sub-head">Sign Up</h2>
+        <div class="sub-main">
+            <form action="#" method="post">
+                @*<input placeholder="First Name" name="Name" class="name" type="text" required="">*@
+                @Html.EditorFor(model => model.UserFirstName, new { htmlAttributes = new { @placeholder = "First Name", @name = "Name", @class = "name", @type = "text", @required = "" } })
+                <span class="icon1"><i class="fa fa-user" aria-hidden="true"></i></span><br>
+                @*<input placeholder="Last Name" name="Name" class="name2" type="text" required="">*@
+                @Html.EditorFor(model => model.UserLastName, new { htmlAttributes = new { @placeholder = "Last Name", @name = "Name", @class = "name2", @type = "text", @required = "" } })
+                <span class="icon2"><i class="fa fa-user" aria-hidden="true"></i></span><br>
+                @*<input placeholder="Phone Number" name="Number" class="number" type="text" required="">*@
+                @Html.EditorFor(model => model.UserPhoneNo, new { htmlAttributes = new { @placeholder = "Phone Number", @name = "Number", @class = "number", @type = "text", @required = "" } })
+                <span class="icon3"><i class="fa fa-phone" aria-hidden="true"></i></span><br>
+                @*<input placeholder="Email" name="mail" class="mail" type="text" required="">*@
+                @Html.EditorFor(model => model.UserEmail, new { htmlAttributes = new { @placeholder = "Email", @name = "mail", @class = "mail", @type = "text", @required = "" } })
+                <span class="icon4"><i class="fa fa-envelope" aria-hidden="true"></i></span><br>
+                @*<input placeholder="Password" name="Password" class="pass" type="password" required="">*@
+                @Html.EditorFor(model => model.UserPassword, new { htmlAttributes = new { @placeholder = "Password", @name = "Password", @class = "pass", @type = "password", @required = "" } })
+                <span class="icon5"><i class="fa fa-unlock" aria-hidden="true"></i></span><br>
+
+                <input type="submit" value="sign up">
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!--//main-->
+    <!--footer-->
+    <div class="footer-w3">
+        <p>&copy; BookHub Flat Sign Up Form . All rights reserved</p>
+    </div>
+    <!--//footer-->
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryval")
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>User</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserFirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.UserFirstName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UserFirstName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserLastName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.UserLastName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UserLastName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserEmail, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.UserEmail, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UserEmail, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.UserPassword, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UserPassword, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.UserAddress, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UserAddress, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserPhoneNo, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.UserPhoneNo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UserPhoneNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>*@
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+</body>
+</html>

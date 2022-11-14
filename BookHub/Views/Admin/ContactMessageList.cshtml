@@ -1,0 +1,27 @@
+﻿@model IEnumerable<BookHub.Models.ContactU>
+
+@{
+    ViewBag.Title = "ContactMessageList";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2 style="color: #3fff33; text-align:center"><strong>Contact Message List</strong></h2>
+
+<table class="table table-hover">
+    <tr>
+        <th><h5 style="color: #3368ff">User Name</h5></th>
+        <th><h5 style="color: #3368ff">User Email</h5></th>
+        <th><h5 style="color: #3368ff">Subject</h5></th>
+        <th><h5 style="color: #3368ff">Message</h5></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.UserName</td>
+            <td>@item.UserEmail</td>
+            <td>@item.Subject</td>
+            <td>@item.Message</td>
+        </tr>
+    }
+</table>

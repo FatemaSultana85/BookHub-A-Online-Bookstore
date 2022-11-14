@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.items-center{
+    align-items: center;
+}
+
+
+
+
+.logo_img{
+    text-align: center;
+    background: chartreuse;
+}
+.HomeDelivary{
+    background-color: chocolate;
+}
+.HomeDelivary h1{
+    text-align: center;
+}

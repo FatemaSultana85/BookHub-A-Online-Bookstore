@@ -1,0 +1,40 @@
+﻿@model List<BookHub.Models.BookDetail>
+@{
+    ViewBag.Title = "BookList";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h1 style="text-align:center; color: #3fff33"><strong>BookList</strong></h1>
+
+<h4 class="text-success">@TempData["msg"]</h4>
+
+<table class="table table-hover">
+    <tr>
+        <th><h5 style="color: #3368ff; text-align:center">Book Name</h5></th>
+        <th><h5 style="color: #3368ff; text-align: center">Author Name</h5></th>
+        <th><h5 style="color: #3368ff; text-align: center">Book Category</h5></th>
+        <th><h5 style="color: #3368ff; text-align: center">Book Price</h5></th>
+        <th><h5 style="color: #3368ff; text-align: center">Book Image</h5></th>
+        <th><h5 style="color: #3368ff; text-align: center">Action</h5></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.BookName</td>
+            <td>@item.AuthorName</td>
+            <td>@item.BookCategory</td>
+            <td>@item.BookPrice</td>
+            <td>
+                <img src="@Url.Content(item.BookImage)" height="120" width="100" />
+            </td>
+            <td>
+                <a href="@Url.Action("Edit",new { id=item.BookID })" class="btn btn-success">Edit</a>
+                <a href="@Url.Action("Delete",new { id=item.BookID })" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+
+

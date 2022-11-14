@@ -1,0 +1,137 @@
+﻿@model BookHub.Models.ContactU
+
+@{
+//Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @*<meta name="viewport" content="width=device-width" />*@
+    <title>ContactUs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/Content/contact_us/assets/css/style.css">
+    <link rel="stylesheet" href="~/Content/contact_us/assets/css/font-awesome.css">
+</head>
+<body>
+    <!-- contact1 -->
+    <section class="w3l-contact-1">
+        <div class="contacts-9 section-gap">
+            <div class="wrapper">
+                <h3 class="global-title text-center">Contact us</h3>
+                <div class="d-grid contact-view">
+                    <div class="cont-details">
+                        <div class="cont-top">
+                            <div class="cont-left text-center">
+                                <span class="fa fa-phone text-primary"></span>
+                            </div>
+                            <div class="cont-right">
+                                <h6>Call Us</h6>
+                                <p><a href="tel:+44 99 555 42">(+880) 1789338777</a></p>
+                            </div>
+                        </div>
+                        <div class="cont-top margin-up">
+                            <div class="cont-left text-center">
+                                <span class="fa fa-envelope-o text-primary"></span>
+                            </div>
+                            <div class="cont-right">
+                                <h6>Email Us</h6>
+                                <p><a href="mailto:example@mail.com" class="mail">support@BookHub.com</a></p>
+                            </div>
+                        </div>
+                        <div class="cont-top margin-up">
+                            <div class="cont-left text-center">
+                                <span class="fa fa-map-marker text-primary"></span>
+                            </div>
+                            <div class="cont-right">
+                                <h6>Address</h6>
+                                <p>144, Dhanmondi, Dhaka 1205</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-content-9">
+                        <form action="#" method="post">
+                            <div class="twice-two">
+                                @*<input type="text" class="form-control" name="w3lName" id="w3lName" placeholder="Name" required="">*@
+                                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @type = "text", @class = "form-control", @name = "w3lName", @id = "w3lName", @placeholder = "Name", @required = "" } })
+                                @*<input type="email" class="form-control" name="w3lSender" id="w3lSender" placeholder="Email"
+            required="">*@
+                                @Html.EditorFor(model => model.UserEmail, new { htmlAttributes = new { @type = "email", @class = "form-control", @name = "w3lSender", @id = "w3lSender", @placeholder = "Email", @required = "" } })
+                            </div>
+                            <div class="twice">
+                                @*<input type="text" class="form-control" name="w3lSubject" id="w3lSubject" placeholder="Subject"
+            required="">*@
+                                @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @type = "text", @class = "form-control", @name = "w3lSubject", @id = "w3lSubject", @placeholder = "Subject", @required = "" } })
+                            </div>
+                            @*<textarea name="w3lMessage" class="form-control" id="w3lMessage" placeholder="Message"
+                                      required=""></textarea>*@
+                            @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @name = "w3lMessage", @class="form-control", @id="w3lMessage", @placeholder="Message", @required="" } })
+                            <button type="submit" class="btn btn-contact">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /contact1 -->
+
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>ContactU</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.UserEmail, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UserEmail, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UserEmail, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
+</body>
+</html>

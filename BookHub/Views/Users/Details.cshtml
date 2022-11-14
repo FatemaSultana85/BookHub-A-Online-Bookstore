@@ -1,0 +1,66 @@
+﻿@model BookHub.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserPhoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserPhoneNo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
