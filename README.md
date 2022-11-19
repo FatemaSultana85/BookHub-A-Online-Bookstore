@@ -9,3 +9,19 @@
 
 * DFD level 2
 ![Diagram3](Diagram/DFDlevel2.png) 
+
+
+# ER diagram
+![Diagram4](Diagram/ERdiagram.png) 
+
+# Use case diagram
+![Diagram5](Diagram/Usecasediagram.png) 
+
+# Collaboration diagram
+![Diagram6](Diagram/collaborationdiagram.png) 
+
+# Sequence diagram
+![Diagram7](Diagram/sequencediagram.png) 
+
+![Diagram78](Diagram/sequencediagram(remained).png) 
+
