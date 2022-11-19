@@ -18,7 +18,7 @@
 ![Diagram5](Diagram/Usecasediagram.png) 
 
 # Collaboration diagram
-![Diagram6](Diagram/collaborationdiagram.png) 
+![Diagram6](Diagram/collaborationDiagram.png) 
 
 # Sequence diagram
 ![Diagram7](Diagram/sequencediagram.png) 
