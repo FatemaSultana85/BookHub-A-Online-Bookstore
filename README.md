@@ -44,5 +44,5 @@ The "Video_Instructions for using the Website.mp4" file shows how the project wo
 ##### Sequence diagram
 ![Diagram7](Diagram/sequencediagram.png) 
 
-![Diagram78](Diagram/sequencediagram(remained).png)
+### ![Diagram78](Diagram/sequencediagram(remained).png)
 
