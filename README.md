@@ -20,8 +20,8 @@ The "Video_Instructions for using the Website.mp4" file shows how the project wo
 
 * They can send contact messages whenever they face any issues on the website or they can give messages in search of any queries
 
-
-### DFD diagram
+### Diagram
+##### DFD diagram
 * DFD level 0
 ![Diagram1](Diagram/Dfdlevel0.png) 
 
@@ -32,16 +32,16 @@ The "Video_Instructions for using the Website.mp4" file shows how the project wo
 ![Diagram3](Diagram/DFDlevel2.png) 
 
 
-### ER diagram
+##### ER diagram
 ![Diagram4](Diagram/ERdiagram.png) 
 
-### Use case diagram
+##### Use case diagram
 ![Diagram5](Diagram/Usecasediagram.png) 
 
-### Collaboration diagram
+##### Collaboration diagram
 ![Diagram6](Diagram/collaborationDiagram.png) 
 
-### Sequence diagram
+##### Sequence diagram
 ![Diagram7](Diagram/sequencediagram.png) 
 
 ![Diagram78](Diagram/sequencediagram(remained).png)
