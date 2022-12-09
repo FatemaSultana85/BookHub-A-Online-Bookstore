@@ -23,5 +23,5 @@
 ### Sequence diagram
 ![Diagram7](Diagram/sequencediagram.png) 
 
-![Diagram78](Diagram/sequencediagram(remained).png) 
+![Diagram78](Diagram/sequencediagram(remained).png)
 
