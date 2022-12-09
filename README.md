@@ -1,6 +1,6 @@
-# BookHub-A-Online-bookstore
+### BookHub-A-Online-bookstore
 
-# DFD diagram
+### DFD diagram
 * DFD level 0
 ![Diagram1](Diagram/Dfdlevel0.png) 
 
@@ -11,16 +11,16 @@
 ![Diagram3](Diagram/DFDlevel2.png) 
 
 
-# ER diagram
+### ER diagram
 ![Diagram4](Diagram/ERdiagram.png) 
 
-# Use case diagram
+### Use case diagram
 ![Diagram5](Diagram/Usecasediagram.png) 
 
-# Collaboration diagram
+### Collaboration diagram
 ![Diagram6](Diagram/collaborationDiagram.png) 
 
-# Sequence diagram
+### Sequence diagram
 ![Diagram7](Diagram/sequencediagram.png) 
 
 ![Diagram78](Diagram/sequencediagram(remained).png) 
