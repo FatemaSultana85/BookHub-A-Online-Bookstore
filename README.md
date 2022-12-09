@@ -10,7 +10,7 @@ BookHub-A Online Bookstore
 * The administrator can see contact messages which were sent by website visitors or users. 
 * Any user can give a contact message in search of any queries or can give complaints if they face any issues. After seeing these messages, an administrator will take the necessary steps.
 
-##### User
+##### Users
 * Each User has to Register himself through their name, phone number, email, and password. Then User goes to the login page and logs in with their registered email and password. 
 
 * Users can see the whole Book-List of different categories like novels, poems, history, Science Fiction, Thriller, etc. after login. 
