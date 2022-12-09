@@ -2,7 +2,7 @@
 BookHub-A Online Bookstore
 
 ### Demonstration:
-You can see how the project is running in 
+The "Video_Instructions for using the Website.mp4" file shows how the project works.
 
 ### Description:
 “BookHub” deals with people who want their books without any difficulties. By using this website people can search for their desired books very easily through the large database and order them online. Users can find different categories of books here like novels, poems, history, Science Fiction, Thrillers, etc. 
